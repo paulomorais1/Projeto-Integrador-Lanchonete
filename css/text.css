@@ -1,0 +1,303 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0;
+    height: max-content;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    min-width: 550px;
+    background-color: rgb(49, 41, 41);
+
+}
+
+.headers {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 24px;
+
+
+}
+
+
+.banner-f {
+    background: #000 url("/Imagens/banner-01.png") top center no-repeat;
+    height: 280px;
+    min-width: 600px;
+}
+
+.logo a {
+    border: none;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.logo img:hover{
+    
+    transform: scale(1.4);
+  
+}
+.menu {
+    font: small-caps bold 12px ARIAL sans-serif 'Trebuchet MS';
+    letter-spacing: 2px;
+    font: upper;
+}
+
+.menu a {
+    transition: 0.7s;
+    color: #Fff;
+    font-size: 19px;
+    text-decoration: none;
+    padding: 0 10px;
+    margin: 0 10px;
+    letter-spacing: 4px;
+}
+
+.menu a:hover {
+    border-top: 3px dotted rgb(255, 102, 0);
+    border-bottom: 3px dotted rgb(255, 102, 0);
+    padding: 10px 0 10px 0;
+    color: rgb(255, 248, 248);
+
+}
+
+body.index .menu a#index,
+body.produtos .menu a#produtos,
+body.contato .menu a#contato,
+body.sobre .menu a#sobre {
+    color: #fff;
+    border-top: 3px dotted rgb(255, 102, 0);
+    border-bottom: 3px dotted rgb(255, 102, 0);
+    padding: 8px 0 8px 0;
+    cursor: text;
+}
+
+/*
+Conteudo Principal
+*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: white;
+    min-width: 550px;
+    justify-self: center;
+    margin-left: 80px;
+
+}
+
+/*Conteudo Página Principal*/
+.conteudo-1 {
+    float: left;
+    width: 500px;
+    min-width: 550px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+    text-indent: 10px;
+    text-align: justify;
+}
+
+.conteudo-1 h1 p {
+    min-width: 550px;
+   
+}
+
+
+
+.conteudo-2 img {
+    float: right;
+
+    margin: 50px 100px 50px 10px;
+    width: 350px;
+    height: 250px;
+}
+
+/*
+Conteudo produtos
+*/
+.cont-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1180px;
+    margin-top: 30px;
+    margin: 30px;
+}
+
+.cont-1 {
+    width: 200px;
+    border: #dbdbdb 1px solid;
+    border-radius: 15px;
+    margin-inline: 60px;
+    margin-block: 15px;
+}
+
+.cont-1:hover {
+  transform: scale(1.1);
+}
+
+.cont-1 img {
+    border-radius: 15px 15px 0 0;
+    height: 165px;
+    width: 200px;
+}
+
+.card-1 {
+    text-align: center;
+    color: #dbdbdb;
+    text-transform: capitalize;
+    text-align: justify;  
+   height: 150px;
+}
+.card-1 p{
+    margin-bottom: 15px;
+  
+}
+
+.money{
+    font-size: 1.32rem;
+
+}
+
+
+span:hover {
+  
+    color: rgb(255, 102, 0);
+    transition-duration:  2s;
+    cursor: pointer;
+}
+.card-1  {
+    text-align: center;
+}
+.container-contato {
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    min-width: 550px;
+
+}
+
+@media (max-width:570px) {
+    .logo {
+        width: fit-content;
+        margin-inline: auto;
+        margin-bottom: 15px;
+    }
+}
+
+
+.container-sobre {
+    margin: 50px 0 10px 190px;
+    color: #dbdbdb;
+    width: 1000px;
+    text-align: justify;
+    min-width: 550px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.container-sobre h1 p {
+    display: flex;
+    flex-wrap: wrap;
+    
+
+}
+
+.container-sobre span {
+    color: #Fff;
+}
+
+.conteiner-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.team_box:hover, .redes img:hover{
+        transform: scale(1.2);
+      
+}
+.team_box img {
+   
+    width: 170px;
+}
+
+.redes {
+    align-self: start;
+}
+
+
+.redes img {
+    padding: 10px;
+    border-radius: 50px;
+    width: 30px;
+}
+
+.team_box {
+    flex-wrap: wrap;
+    border: 2px solid rgb(221, 235, 227);
+    border-radius: 25px 25px 0 0;
+    margin: 20px;
+    background-color: #b8b0a0;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.nm,
+.prfl {
+    color: #282725; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.32rem;
+}
+
+
+
+.footer1 {
+    clear: both;
+    flex: 1;
+    width: 100%;
+    background-color: #000;
+    color: aliceblue;
+    font-size: 0.9125rem;
+}
+
+.footer_contato p {
+    text-shadow: 1px 1px #6c6861;
+    margin: 20px 0 0 70px;
+
+}
+
+
+.container_logo {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2px;
+}
+
+
+
+.footer__logo img {
+    margin: 0px 100px 0 80px;
+    width: 80px;
+}
+
+.footer__logo img:hover{
+    
+        transform: scale(1.4);
+      
+}
+
+.footer__copy {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+
+}

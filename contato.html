@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,89 +7,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/forms.css">
-    <script  src="js/validacao.js"></script>
-    <title>Lanchonete-Contato</title>
+    <script type="text/javascript" src="js/validacao.js"></script>
 
+    <title>Junnin's Burguer</title>
 </head>
 
 <body class="contato">
-    <div class="headers">
-        <div class="logo">
+    <!--Inicio Do Header-->
 
-            <a href="index.html"> <img src="Imagens/LogoJuOficial.png" alt="logo do site"></a> 
-        </div>
+    <header>
+        <div class="headers">
+            <div class="logo">
 
-        <div class="menu">
-    
-            <a  id="index" class="link" href="index.html">Inicio</a>
-            <a id="produtos" class="link" href="produtos.html">Lanches</a>
-            <a id="contato" class="link" href="contato.html">Contato</a>
-            <a id="sobre" class="link" href="sobre.html">Sobre</a>
-    
-        </div>
-    </div>
-    <div class="banner-f">
-        <div class="banner">
-
-
-        </div>
-    </div>
-
-
-    
-    <div class="container-contato">
-        <div class="container-form " alt="Container do formulario">
-            <form  id="formulario" method="POST" name="formulario">
-    
-                <label for="name">Nome Completo:</label>
-                <input type="text" id="name" name="name" placeholder="Digite seu Nome.." required>
-                <div id="resultado-name"></div>
-                <label for="lemail">E-mail</label>
-                <input type="text" id="lemail" name="lemail" placeholder="Digite o seu E-mail.." onblur="validacaoEmail(formulario.lemail)"  maxlength="60" size='65' required>
-                <div id="resultado-email"></div>
-                <label for="lassunto">Assunto:</label>
-                <input type="text" id="lassunto" name="lassunto" placeholder="Qual o assunto..">
-                <div id="resultado-assunto"></div>
-    
-    
-                <label for="lmensagem">Mensagem: </label>
-                <textarea id="lmensagem" name="lmensagem" placeholder="Descreva seu assunto..."
-                    style="height:200px"></textarea>
-                    <div id="resultado-mensagem"></div>
-                <div class="button1">
-                <button type="button" id="btn-validar" value="Enviar" onclick="validar()" >Enviar</button>
+                <a href="index.html"> <img src="Imagens/LogoJuOficial.png" alt="logo site"></a>
+                <!--Logo-->
+            </div>
+            <nav>
+                <div class="menu">
+                    <a id="index" href="index.html">Início</a>
+                    <a id="lanches" href="lanches.html">Lanches</a>
+                    <a id="contato" href="contato.html">Contato</a>
+                    <a id="sobre" href="sobre.html">Sobre</a>
                 </div>
-
-    
-            </form>
+            </nav>
         </div>
-    </div>
+        <div class="banner-f">
+            <div class="banner">
+                <!--A imagem do banner se encontra no CSS-->
+
+            </div>
+        </div>
+    </header>
+    <!--Fim Do Header-->
+    <main id="contato-form">
+        <!--Conteudo Inicial -->
+        <section>
+            <div class="container-contato">
+                <div class="container-form " alt="Container do formulario">
+                    <form id="formulario" method="POST" name="formulario">
+
+                        <label for="name">Nome Completo:</label>
+
+                        <input type="text" id="name" required maxlength="45" placeholder="Digite seu Nome..."
+                            onkeypress="return lettersOnly(event);" />
+                        <span id="resultado-name"></span>
+
+                        <label for="lcel">Celular:</label>
+                        <input type="tel" id="lcel" maxlength="15" onkeyup="handlePhone(event)"
+                            placeholder="(99) 99999-9999" pattern="[0-9]+$" />
+                        <span id="resultado-lcel"></span>
+
+                        <label for="lemail">E-mail:</label>
+                        <input type="email" id="lemail" name="lemail" placeholder="(exemplo@exemplo.com)"
+                            onblur="validacaoEmail(formulario.lemail)" maxlength="60" size='65' required>
+                        <span id="resultado-email"></span>
+
+                        <label for="lassunto">Assunto:</label>
+                        <input type="text" id="lassunto" name="lassunto" placeholder="Qual o assunto..">
+                        <span id="resultado-assunto"></span>
+
+                        <label for="lmensagem">Mensagem: </label>
+
+                        <textarea id="lmensagem" type="text" name="lmensagem"
+                            placeholder="Descreva seu assunto..."></textarea>
+                        <span id="resultado-mensagem"></span>
+
+                        <div class="button1">
+                            <button type="button" id="btn-validar" value="Enviar" onclick="validar()">Enviar</button>
+                        </div>
 
 
+                    </form>
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Final do Conteudo  -->
+    </main>
     <footer class="footer1">
-      <div class="container_logo">
-          <div class="footer__logo">
+        <div class="container_logo">
 
-              <a href="index.html"> <img src="Imagens/LogoJuOficial.png" alt="logo do site"></a>
-          </div>
+            <div class="footer__logo">
 
+                <a class="link-footer" href="index.html"> <img src="Imagens/LogoJuOficial.png" alt="logo do site"></a>
+            </div>
 
-          <div class="footer_contato">
+            <div class="footer_contato">
 
-              <p class="f-telefone"><span>Delivery:</span>(16) 99964-9810</p>
-              <p class="f-email"><span>E-mail:</span> junninsburguer@burguer.com</p>
+                <p class="f-telefone"><span>Delivery:</span>(16) 99964-9810</p>
+                <p class="f-email"><span>E-mail:</span> junninsburguer@burguer.com</p>
 
-          </div>
-      </div>
-      <div class="attribution">
-          <div class="footer__copy">
-              &copy; Junni'ns Burguer. Todos direitos reservados.
-          </div>
-      </div>
+            </div>
+        </div>
 
-  </footer>
-    
+        <div class="attribution">
+            <div class="footer__copy">
+                &copy; Junni'ns Burguer. Todos direitos reservados.
+            </div>
+        </div>
 
+    </footer>
+    </main>
 </body>
 
 </html>

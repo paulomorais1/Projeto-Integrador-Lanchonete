@@ -15,7 +15,12 @@ body {
 .headers {
     display: flex;
     flex-wrap: wrap;
-    background-color: #000;
+    /* background-color: #000;
+     */
+    background: #000;
+    background-size: 300px;
+
+
     justify-content: space-between;
     align-items: center;
     padding-inline: 24px;
@@ -24,25 +29,26 @@ body {
 }
 
 
-.banner-f {
+/* .banner-f {
     background: #000 url("/Imagens/banner-01.png") top center no-repeat;
     height: 280px;
     min-width: 600px;
-}
+} */
 
 .logo a {
     border: none;
 }
 
 .logo img {
-    width: 90px;
+    width: 180px;
 }
 
-.logo img:hover{
-    
+.logo img:hover {
+
     transform: scale(1.4);
-  
+
 }
+
 .menu {
     font: small-caps bold 12px ARIAL sans-serif 'Trebuchet MS';
     letter-spacing: 2px;
@@ -52,7 +58,7 @@ body {
 .menu a {
     transition: 0.7s;
     color: #Fff;
-    font-size: 19px;
+    font-size: 20px;
     text-decoration: none;
     padding: 0 10px;
     margin: 0 10px;
@@ -68,7 +74,7 @@ body {
 }
 
 body.index .menu a#index,
-body.produtos .menu a#produtos,
+body.lanches .menu a#lanches,
 body.contato .menu a#contato,
 body.sobre .menu a#sobre {
     color: #fff;
@@ -81,21 +87,70 @@ body.sobre .menu a#sobre {
 /*
 Conteudo Principal
 */
-.container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    color: white;
-    min-width: 550px;
-    justify-self: center;
-    margin-left: 80px;
+section #titulo {
+    text-align: center;
 
 }
 
-/*Conteudo Página Principal*/
+#titulo {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 217, 1);
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    text-transform: none;
+}
+
+.conteudo-inicio {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    text-justify: auto;
+}
+
+#img2 img,
+#img1 img {
+
+    border-radius: 15px;
+}
+
+
+.conteudo-inicio h3 {
+
+    color: rgb(255, 217, 1);
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.conteudo-inicio p {
+    color: rgb(243, 243, 243);
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+
+
+}
+
+#section-sobre {
+    margin: 0 auto;
+    width: 1100px;
+    margin-top: 50px;
+}
+
+#section-sobre {
+    color: #dbdbdb;
+}
+
 .conteudo-1 {
-    float: left;
-    width: 500px;
+
     min-width: 550px;
     margin-top: 25px;
     margin-right: 25px;
@@ -103,31 +158,50 @@ Conteudo Principal
     margin-left: 50px;
     text-indent: 10px;
     text-align: justify;
+
 }
 
-.conteudo-1 h1 p {
+
+.conteudo-1 p {
     min-width: 550px;
-   
+    color: #dbdbdb;
+
 }
 
+.conteudo-1 h1 {
+    color: rgb(255, 217, 1);
+    font-size: 25px;
+}
 
+.cont-inicial-1 img {
+    float: left;
+    width: 400px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    border-radius: 200px;
+}
 
-.conteudo-2 img {
+.cont-inicial-2 img {
     float: right;
-
-    margin: 50px 100px 50px 10px;
-    width: 350px;
-    height: 250px;
+    width: 400px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    border-radius: 300px;
 }
 
 /*
-Conteudo produtos
+Conteudo lanches
 */
-.cont-produtos {
+
+#conteudo-lanches{
+    margin: 0 auto;
+}
+
+.cont-lanches {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1180px;
+    width: 1180px;
     margin-top: 30px;
     margin: 30px;
 }
@@ -141,7 +215,9 @@ Conteudo produtos
 }
 
 .cont-1:hover {
-  transform: scale(1.1);
+    transition: all 1s;
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 .cont-1 img {
@@ -154,34 +230,42 @@ Conteudo produtos
     text-align: center;
     color: #dbdbdb;
     text-transform: capitalize;
-    text-align: justify;  
-   height: 150px;
-}
-.card-1 p{
-    margin-bottom: 15px;
-  
+    text-align: justify;
+    height: 150px;
 }
 
-.money{
+.card-1 p {
+    margin-bottom: 15px;
+
+}
+
+.money {
     font-size: 1.32rem;
 
 }
 
 
 span:hover {
-  
+
     color: rgb(255, 102, 0);
-    transition-duration:  2s;
+    transition-duration: 2s;
     cursor: pointer;
 }
-.card-1  {
+
+.card-1 {
     text-align: center;
 }
+
+#contato-form {
+    margin: 0 auto;
+}
+
 .container-contato {
     margin: 0 auto;
     display: flex;
     align-content: center;
-    min-width: 550px;
+    margin-top: 50px;
+    margin-bottom: 25px;
 
 }
 
@@ -207,7 +291,7 @@ span:hover {
 .container-sobre h1 p {
     display: flex;
     flex-wrap: wrap;
-    
+
 
 }
 
@@ -221,12 +305,17 @@ span:hover {
     justify-content: center;
 
 }
-.team_box:hover, .redes img:hover{
-        transform: scale(1.2);
-      
+
+.team_box:hover,
+.redes img:hover {
+    transform: scale(1.2);
+    transition: all 1s;
+
+
 }
+
 .team_box img {
-   
+
     width: 170px;
 }
 
@@ -253,7 +342,7 @@ span:hover {
 
 .nm,
 .prfl {
-    color: #282725; 
+    color: #282725;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.32rem;
 }
@@ -289,10 +378,9 @@ span:hover {
     width: 80px;
 }
 
-.footer__logo img:hover{
-    
-        transform: scale(1.4);
-      
+.footer__logo img:hover {
+    transform: scale(1.4);
+    transition: all 1s;
 }
 
 .footer__copy {

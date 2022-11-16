@@ -9,32 +9,20 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     min-width: 550px;
     background-color: rgb(49, 41, 41);
-
 }
+/* Menu Cabeçalho*/
 
 .headers {
     display: flex;
     flex-wrap: wrap;
-    /* background-color: #000;
-     */
     background: #000;
     background-size: 300px;
-
-
     justify-content: space-between;
     align-items: center;
-    padding-inline: 24px;
-
-
+    padding-inline: 30px;
 }
 
-
-/* .banner-f {
-    background: #000 url("/Imagens/banner-01.png") top center no-repeat;
-    height: 280px;
-    min-width: 600px;
-} */
-
+/*Inicio Logo do Menu*/
 .logo a {
     border: none;
 }
@@ -44,15 +32,14 @@ body {
 }
 
 .logo img:hover {
-
     transform: scale(1.4);
-
 }
+/*Fim Logo do Menu*/
 
 .menu {
     font: small-caps bold 12px ARIAL sans-serif 'Trebuchet MS';
     letter-spacing: 2px;
-    font: upper;
+    text-transform: uppercase;
 }
 
 .menu a {
@@ -70,7 +57,6 @@ body {
     border-bottom: 3px dotted rgb(255, 102, 0);
     padding: 10px 0 10px 0;
     color: rgb(255, 248, 248);
-
 }
 
 body.index .menu a#index,
@@ -89,54 +75,71 @@ Conteudo Principal
 */
 section #titulo {
     text-align: center;
-
 }
 
 #titulo {
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
     color: rgb(255, 217, 1);
     font-family: 'Arial Narrow', Arial, sans-serif;
     text-transform: none;
 }
 
-.conteudo-inicio {
+h1 {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#F2BB13, #F25922);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
+.conteudo{
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    text-justify: auto;
+    text-align: justify;
+}
+.conteudo-inicio {
+    display: flex; 
+}
+
+.conteudo-inicio p{
+    width: 400px;
+
 }
 
 #img2 img,
 #img1 img {
-
     border-radius: 15px;
 }
 
+#img1, #img2{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 70px;
+ 
+}
+
+#img1:hover, #img2:hover{
+    transition: all 1s;
+    transform: scale(1.07);
+}
 
 .conteudo-inicio h3 {
-
     color: rgb(255, 217, 1);
-    font-size: 22px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
 }
 
 .conteudo-inicio p {
     color: rgb(243, 243, 243);
-    font-size: 19px;
+    font-size: 24px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    text-transform: capitalize;
 }
-
 
 .container {
     display: flex;
     justify-content: space-between;
     width: 1000px;
-
-
 }
 
 #section-sobre {
@@ -149,8 +152,7 @@ section #titulo {
     color: #dbdbdb;
 }
 
-.conteudo-1 {
-
+ .conteudo-inici {
     min-width: 550px;
     margin-top: 25px;
     margin-right: 25px;
@@ -158,14 +160,11 @@ section #titulo {
     margin-left: 50px;
     text-indent: 10px;
     text-align: justify;
-
-}
-
+} 
 
 .conteudo-1 p {
     min-width: 550px;
     color: #dbdbdb;
-
 }
 
 .conteudo-1 h1 {
@@ -173,7 +172,7 @@ section #titulo {
     font-size: 25px;
 }
 
-.cont-inicial-1 img {
+ .cont-inicial-1 img {
     float: left;
     width: 400px;
     margin-left: 100px;
@@ -187,12 +186,11 @@ section #titulo {
     margin-left: 100px;
     margin-bottom: 100px;
     border-radius: 300px;
-}
+} 
 
 /*
 Conteudo lanches
 */
-
 #conteudo-lanches{
     margin: 0 auto;
 }
@@ -234,22 +232,19 @@ Conteudo lanches
     height: 150px;
 }
 
+h3 {
+    font-size: 25px;
+    background: -webkit-linear-gradient(#F2BB13, #F25922);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
 .card-1 p {
     margin-bottom: 15px;
-
 }
 
 .money {
     font-size: 1.32rem;
-
-}
-
-
-span:hover {
-
-    color: rgb(255, 102, 0);
-    transition-duration: 2s;
-    cursor: pointer;
 }
 
 .card-1 {
@@ -266,7 +261,6 @@ span:hover {
     align-content: center;
     margin-top: 50px;
     margin-bottom: 25px;
-
 }
 
 @media (max-width:570px) {
@@ -277,7 +271,6 @@ span:hover {
     }
 }
 
-
 .container-sobre {
     margin: 50px 0 10px 190px;
     color: #dbdbdb;
@@ -285,14 +278,11 @@ span:hover {
     text-align: justify;
     min-width: 550px;
     font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .container-sobre h1 p {
     display: flex;
     flex-wrap: wrap;
-
-
 }
 
 .container-sobre span {
@@ -303,26 +293,23 @@ span:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
+    margin-left: 13px;
+   
 }
 
 .team_box:hover,
 .redes img:hover {
     transform: scale(1.2);
     transition: all 1s;
-
-
 }
 
 .team_box img {
-
     width: 170px;
 }
 
 .redes {
     align-self: start;
 }
-
 
 .redes img {
     padding: 10px;
@@ -334,10 +321,11 @@ span:hover {
     flex-wrap: wrap;
     border: 2px solid rgb(221, 235, 227);
     border-radius: 25px 25px 0 0;
-    margin: 20px;
-    background-color: #b8b0a0;
+    margin: 20px 25px 20px 35px;
+    background-color: #c2c0ba;
     margin-bottom: 5rem;
     text-align: center;
+    width: 200px;
 }
 
 .nm,
@@ -347,8 +335,6 @@ span:hover {
     font-size: 1.32rem;
 }
 
-
-
 .footer1 {
     clear: both;
     flex: 1;
@@ -356,26 +342,31 @@ span:hover {
     background-color: #000;
     color: aliceblue;
     font-size: 0.9125rem;
+
 }
 
+.footer_contato{
+    margin-top: 20px;
+    font-size: 1.1125rem;
+}
+.footer_contato {
+    margin-top: 30px;
+}
 .footer_contato p {
     text-shadow: 1px 1px #6c6861;
     margin: 20px 0 0 70px;
-
 }
-
 
 .container_logo {
     display: flex;
     justify-content: space-evenly;
     margin: 2px;
+    
 }
-
-
 
 .footer__logo img {
     margin: 0px 100px 0 80px;
-    width: 80px;
+    width: 150px;
 }
 
 .footer__logo img:hover {
@@ -387,5 +378,5 @@ span:hover {
     text-align: center;
     color: #ffffff;
     margin-bottom: 20px;
-
+    font-size: 1.1125rem;
 }

@@ -3,21 +3,13 @@ select,
 textarea {
   display: flex;
   width: 450px;
-  /* Full width */
   padding: 12px;
-  /* Some padding */
   border: 1px solid rgb(95, 84, 84);
-  /* Gray border */
   border-radius: 4px;
-  /* Rounded borders */
   box-sizing: border-box;
-  /* Make sure that padding and width stays in place */
   margin-top: 8px;
-  /* Add a top margin */
   margin-top: 7px;
-  /* Bottom margin */
   resize: vertical;
-  /* Allow the user to vertically resize the textarea (not horizontally) */
   background-color: rgba(240, 248, 255, 0.814);
 
 }
@@ -49,9 +41,8 @@ input[type="email"] {
   background-color: rgba(240, 248, 255, 0.814);
 }
 
-/* Style the submit button with a specific background color etc */
 button {
-  background-color: #f59134e4;
+  background-color: #F25922;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
@@ -61,9 +52,9 @@ button {
 }
 
 button:hover {
-  background: #f59134e4;
-  ;
-  box-shadow: 0 5px 0 #f59134e4;
+  background: #dd5321b4;
+  
+  
 }
 
 button:active {
@@ -88,6 +79,8 @@ label {
 span{
   cursor: pointer;
   margin-bottom: 9px;
+  font-size: 1em;
+
 }
 
 #formulario {
@@ -114,7 +107,7 @@ span{
   border-radius: 15px;
   padding: 20px;
   border: 1px solid;
-  background-color: gray;
+  background-color: rgba(202, 195, 195, 0.87);
 
 
 }

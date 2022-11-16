@@ -13,17 +13,17 @@ function validar() {
     if (name == "") {
 
         document.getElementById("resultado-name").innerHTML = "O Campo é obrigatório!";
-        document.getElementById('resultado-name').style.color = 'red';
-        document.getElementById("name").style.borderColor = "red";
+        document.getElementById('resultado-name').style.color = '#C6001A';
+        document.getElementById("name").style.borderColor = "#C6001A";
         formulario.name.focus();
     } else {
         document.getElementById("name").style.borderColor = "black";
         document.getElementById('resultado-name').innerHTML = ""
     }
     if (lcel == "") {
-        document.getElementById('resultado-lcel').innerHTML = "O Campo é obrigatorio!";
-        document.getElementById('resultado-lcel').style.color = 'red';
-        document.getElementById("lcel").style.borderColor = "red";
+        document.getElementById('resultado-lcel').innerHTML = "O Campo é obrigatório!";
+        document.getElementById('resultado-lcel').style.color = '#C6001A';
+        document.getElementById("lcel").style.borderColor = "#C6001A";
         formulario.lcel.focus();
     } else {
         document.getElementById("lcel").style.borderColor = "black";
@@ -31,9 +31,9 @@ function validar() {
     }
 
     if (lemail == "") {
-        document.getElementById('resultado-email').innerHTML = "O Campo é obrigatorio!";
-        document.getElementById('resultado-email').style.color = 'red';
-        document.getElementById("lemail").style.borderColor = "red";
+        document.getElementById('resultado-email').innerHTML = "O Campo é obrigatório!";
+        document.getElementById('resultado-email').style.color = '#C6001A';
+        document.getElementById("lemail").style.borderColor = "#C6001A";
         formulario.lemail.focus();
     }
     else {
@@ -41,9 +41,9 @@ function validar() {
         document.getElementById("lemail").style.borderColor = "black";
     }
     if (lassunto == "") {
-        document.getElementById('resultado-assunto').innerHTML = "O Campo é obrigatorio!"
-        document.getElementById('resultado-assunto').style.color = 'red';
-        document.getElementById("lassunto").style.borderColor = "red";
+        document.getElementById('resultado-assunto').innerHTML = "O Campo é obrigatório!"
+        document.getElementById('resultado-assunto').style.color = '#C6001A';
+        document.getElementById("lassunto").style.borderColor = "#C6001A";
         formulario.lassunto.focus();
     }
 
@@ -52,9 +52,9 @@ function validar() {
         document.getElementById("lassunto").style.borderColor = "black";
     }
     if (lmensagem == "") {
-        document.getElementById('resultado-mensagem').innerHTML = "O Campo é obrigatorio!";
-        document.getElementById('resultado-mensagem').style.color = 'red';
-        document.getElementById("lmensagem").style.borderColor = "red";
+        document.getElementById('resultado-mensagem').innerHTML = "O Campo é obrigatório!";
+        document.getElementById('resultado-mensagem').style.color = '#C6001A';
+        document.getElementById("lmensagem").style.borderColor = "#C6001A";
         formulario.lmensagem.focus();
     }
     else {
@@ -85,7 +85,9 @@ function validacaoEmail(field) {
         document.getElementById("resultado-email").innerHTML = "";
     }
     else {
-        document.getElementById("resultado-email").innerHTML = "<font color='red'>Email inválido! </font>";
+        document.getElementById("resultado-email").innerHTML = "Email inválido!";
+        document.getElementById('resultado-email').style.color = '#C6001A';
+
 
     }
 

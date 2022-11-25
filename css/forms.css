@@ -51,10 +51,17 @@ button {
   margin-bottom: 10px;
 }
 
+.button1 button{
+  margin: 10px;
+}
+
+.button1{
+  margin-top: 25px;
+}
+
 button:hover {
-  background: #dd5321b4;
-  
-  
+  background: #232221b4;
+  color: aliceblue; 
 }
 
 button:active {
@@ -74,33 +81,24 @@ label {
   color: black;
   font-size: 1.2em;
   font-style: italic;
-
 }
+
 span{
   cursor: pointer;
   margin-bottom: 9px;
   font-size: 1em;
-
 }
 
 #formulario {
   display: flex;
   flex-direction: column;
-
 }
 
 #formulario button {
   margin-left: 300px;
 }
 
-#btn-validar {
-  width: 150px;
 
-}
-
-
-
-/* Add a background color and some padding around the form */
 .container-form {
   margin-top: 10px;
   margin-bottom: 10px;
@@ -108,13 +106,12 @@ span{
   padding: 20px;
   border: 1px solid;
   background-color: rgba(202, 195, 195, 0.87);
-
-
 }
+
 textarea{
-  height: 170px;
-  
+  height: 170px; 
 }
+
 textarea::placeholder{
   color: black;
   font-size: 1.2em;
@@ -125,4 +122,12 @@ input::placeholder {
   color: black;
   font-size: 1.2em;
   font-style: italic;
+}
+
+#formularioexito{
+  display: flex;
+  font-size: 1.1em;
+  font-style: italic;
+  text-decoration:underline ;
+
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/forms.css">
-    <script type="text/javascript" src="js/validacao.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/validacao.js"></script>
+    <script src="js/modal.js"></script>
 
     <title>Junnin's Burguer</title>
 </head>
@@ -41,48 +43,64 @@
     <!--Fim Do Header-->
     <main id="contato-form">
         <!--Conteudo Inicial -->
-        <section>
+       
+          
             <div class="container-contato">
-                <div class="container-form " alt="Container do formulario">
+                <div class="container-form " >
+                 
                     <form id="formulario" method="POST" name="formulario">
 
                         <label for="name">Nome Completo:</label>
 
                         <input type="text" id="name" required maxlength="45" placeholder="Digite seu Nome..."
-                            onkeypress="return lettersOnly(event);" />
+                            onkeypress="return lettersOnly(event);" >
                         <span id="resultado-name"></span>
 
                         <label for="lcel">Celular:</label>
-                        <input type="tel" id="lcel" maxlength="15" onkeyup="handlePhone(event)"
-                            placeholder="(99) 99999-9999" pattern="[0-9]+$" />
+                        <input type="tel" id="lcel" required maxlength="15" onkeyup="handlePhone(event)"
+                            placeholder="(99) 99999-9999" pattern="[0-9]+$" >
                         <span id="resultado-lcel"></span>
 
                         <label for="lemail">E-mail:</label>
-                        <input type="email" id="lemail" name="lemail" placeholder="Escreva seu e-mail (exemplo@exemplo.com)"
-                            onblur="validacaoEmail(formulario.lemail)" maxlength="60" size='65' required>
+                        <input type="email" id="lemail" name="lemail"
+                            placeholder="Escreva seu e-mail (exemplo@exemplo.com)"
+                            onblur="validacaoEmail(formulario.lemail)" maxlength="50" size='65' required>
                         <span id="resultado-email"></span>
 
                         <label for="lassunto">Assunto:</label>
-                        <input type="text" id="lassunto" name="lassunto" placeholder="Qual o assunto..">
+                        <input type="text" id="lassunto" required name="lassunto" maxlength="50" placeholder="Qual o assunto..">
                         <span id="resultado-assunto"></span>
 
                         <label for="lmensagem">Mensagem: </label>
 
-                        <textarea id="lmensagem" type="text" name="lmensagem"
-                            placeholder="Descreva seu assunto..."></textarea>
+                        <textarea id="lmensagem" required name="lmensagem" maxlength="1550" placeholder="Descreva seu assunto..."></textarea>
                         <span id="resultado-mensagem"></span>
-
-                        <div class="button1">
-                            <button type="button" id="btn-validar" value="Enviar" onclick="validar()">Enviar</button>
-                        </div>
+                        <span id="formularioexito"></span>
+                        
+                        <button id="myBtn" type="button">Enviar</button>
 
 
                     </form>
+                    
+
+
+                    <div id="myModal" class="modal">
+
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <p >Você realmente deseja enviar o Formulário ?</p>
+                            <div class="button1">
+                                <button type="button" id="btn-enviar" value="Enviar" onclick="enviar()">Confirmar</button>
+                                <button type="button" id="btn-cancelar" value="Enviar" onclick="cancelar()">Cancelar</button>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+      
 
-
-        </section>
+      
         <!-- Final do Conteudo  -->
     </main>
     <footer class="footer1">
@@ -108,7 +126,90 @@
         </div>
 
     </footer>
-    </main>
+    
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+
+        let name = formulario.name.value;
+        let lcel = formulario.lcel.value;
+        let lemail = formulario.lemail.value;
+        let lassunto = formulario.lassunto.value;
+        let lmensagem = formulario.lmensagem.value;
+
+        /*Confere se os campos do formulario está preenchido*/
+        if (name == "") {
+
+            document.getElementById("resultado-name").innerHTML = "O Campo é obrigatório!";
+            document.getElementById('resultado-name').style.color = '#C6001A';
+            document.getElementById("name").style.borderColor = "#C6001A";
+            formulario.name.focus();
+        } else {
+            document.getElementById("name").style.borderColor = "black";
+            document.getElementById('resultado-name').innerHTML = ""
+        }
+        if (lcel == "") {
+            document.getElementById('resultado-lcel').innerHTML = "O Campo é obrigatório!";
+            document.getElementById('resultado-lcel').style.color = '#C6001A';
+            document.getElementById("lcel").style.borderColor = "#C6001A";
+            formulario.lcel.focus();
+        } else {
+            document.getElementById("lcel").style.borderColor = "black";
+            document.getElementById('resultado-lcel').innerHTML = ""
+        }
+
+        if (lemail == "") {
+            document.getElementById('resultado-email').innerHTML = "O Campo é obrigatório!";
+            document.getElementById('resultado-email').style.color = '#C6001A';
+            document.getElementById("lemail").style.borderColor = "#C6001A";
+            formulario.lemail.focus();
+        }
+        else {
+            document.getElementById('resultado-email').innerHTML = ""
+            document.getElementById("lemail").style.borderColor = "black";
+        }
+        if (lassunto == "") {
+            document.getElementById('resultado-assunto').innerHTML = "O Campo é obrigatório!"
+            document.getElementById('resultado-assunto').style.color = '#C6001A';
+            document.getElementById("lassunto").style.borderColor = "#C6001A";
+            formulario.lassunto.focus();
+        }
+
+        else {
+            document.getElementById('resultado-assunto').innerHTML = ""
+            document.getElementById("lassunto").style.borderColor = "black";
+        }
+        if (lmensagem == "") {
+            document.getElementById('resultado-mensagem').innerHTML = "O Campo é obrigatório!";
+            document.getElementById('resultado-mensagem').style.color = '#C6001A';
+            document.getElementById("lmensagem").style.borderColor = "#C6001A";
+            formulario.lmensagem.focus();
+        }
+        else {
+            document.getElementById('resultado-mensagem').innerHTML = ""
+            document.getElementById("lmensagem").style.borderColor = "black";
+        }
+        if (lmensagem && lassunto && lcel && lemail && name != "") {
+
+        modal.style.display = "block"; 
+        }
+    }
+
+    // Quando o usuário clicar em <span> (x), fecha o modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    } 
+
+// Quando o usuário clicar em qualquer lugar fora do modal, feche-o
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    </script>
 </body>
 
 </html>
